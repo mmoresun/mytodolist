@@ -1,0 +1,13 @@
+.todoitemlist__main {
+
+    border: 2px rgb(204, 204, 204) solid;
+    width: 700px;
+    min-height: 70px;
+    border-radius: 10px;
+    background: rgba(0, 255, 115, 0.1);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;        
+    flex-wrap: wrap;
+
+}

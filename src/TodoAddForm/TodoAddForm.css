@@ -1,0 +1,23 @@
+.todoaddform__main {
+
+    text-align: center;
+    border: 2px #ccc solid;
+    width: 700px;
+    min-height: 70px;
+    border-radius: 10px;
+    background: rgba(0, 153, 255, 0.1);
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    min-width: 250px;
+    min-height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}

@@ -1,0 +1,17 @@
+.footer__main {
+
+    border: 2px #ccc solid;
+    width: 700px;
+    min-height: 70px;
+    border-radius: 10px;
+    background: rgba(255, 238, 0, 0.1);
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+    font-weight: 500;
+}
