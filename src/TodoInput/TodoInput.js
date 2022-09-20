@@ -1,25 +1,35 @@
 import React from 'react';
+import './TodoInput.css';
 
 const TodoInput = ({ addNewEntry, todoEntry, setTodoEntry }) => {
 
     return (
 
-        <div>
+        <div className='todoinput__main'>
 
             <form>
 
-                <input
+                <div>
+                    <input
 
-                    value={todoEntry}      
-                    onChange={e => setTodoEntry(e.target.value)}              
-                    type='text'
-                    placeholder='Enter new activity' />
+                        id='standartInput'
+                        style={{minWidth: '250px'}}
+                        value={todoEntry}
+                        onChange={e => setTodoEntry(e.target.value)}
+                        type='text'
+                        placeholder='Add new entry (max 55 symbols)' />
 
-                <button
+                </div>
 
-                    onClick={addNewEntry}>Add entry
+                <div>
 
-                </button>
+                    <button
+
+                        onClick={addNewEntry}><i className="fa-light fa-plus"></i>Add entry
+
+                    </button>
+                    
+                </div>
 
             </form>
 

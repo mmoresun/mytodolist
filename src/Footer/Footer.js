@@ -3,10 +3,12 @@ import './Footer.css';
 
 
 const Footer = () => {
-    
+
     return (
         <div className='footer__main'>
+
             &lt;/MyTodoList&gt;
+
         </div>
     );
 }

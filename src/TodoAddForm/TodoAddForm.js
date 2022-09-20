@@ -15,6 +15,8 @@ const TodoAddForm = ({ addNewEntry, todoEntry, setTodoEntry }) => {
                 setTodoEntry={setTodoEntry}
             />
 
+            {todoEntry.length > 55 && (<h1 style={{ color: 'red', fontSize: 'small', margin: '0 0 5px 0' }}>Too many symbols: {todoEntry.length} instead of 55 maximum</h1>)}
+
         </div>
     );
 }
