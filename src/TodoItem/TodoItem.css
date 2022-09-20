@@ -1,0 +1,115 @@
+.todoitem__main {
+
+    border: 1px #ccc solid;
+    border-radius: 6px;
+    margin: 6px 0 16px 0;
+    padding: 5px 15px 5px 15px;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 150ms ease;
+
+}
+
+.todoitem__main.favorite {
+
+    background-color: rgb(255, 255, 220, .6);
+    transition: 150ms ease;
+}
+
+.todoItem__editBlock {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.todoitem__buttons {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px #ccc solid;
+    margin: 5px;
+    padding: 5px;
+    min-width: 75px;
+}
+
+button:hover {
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+h1.done {
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(147, 144, 144, 0.9);
+    text-decoration: line-through;
+    cursor: pointer;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;  
+    
+    text-align: left;
+}
+
+h1.undone {
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+    cursor: pointer;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    
+    text-align: left;
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .todoitem__main {
+
+        max-width: 84%;
+    }
+
+    .todoItem__editBlock {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    button {
+        min-width: auto;
+    }
+
+}
+
+i {
+
+    margin: 5px 10px 5px 5px;
+
+}

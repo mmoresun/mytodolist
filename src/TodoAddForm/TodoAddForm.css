@@ -1,0 +1,38 @@
+.todoaddform__main {
+
+    text-align: center;
+    border: 2px #ccc solid;
+    max-width: 750px;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 6px;
+    background: rgb(215, 238, 253);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 15px 0 0 0;
+    align-items: center;
+    
+    position: sticky;
+    bottom: 0px;
+    /* box-shadow: 1px 0 3px 0 rgba(0, 0, 0, .3); */
+
+}
+
+input {
+    
+    min-width: 250px;
+    min-height: 25px;
+    border-radius: 5px;
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .todoaddform__main {
+        padding: 5px 0 0 0;
+
+    }
+
+}
