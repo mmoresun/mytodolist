@@ -17,19 +17,28 @@ const TodoItemsList = ({
   doneChecked,
 }) => {
 
+
+  // Filter by search
+
   const doneFilteredTodos = searchFilteredTodos.filter((item) =>
     !doneChecked ? !item.done : item
   );
 
+  // Filtering favorite items
+
   const favFilteredTodos = doneFilteredTodos.filter((item) =>
     favChecked ? item.favorite : item
   );
+
+  // Filtering incomplete items
 
   const todoElements = favFilteredTodos.map((item) => {
 
     const { id, ...itemProps } = item;
 
     return (
+
+      // formatting any item
 
       <TodoItem
         key={id}

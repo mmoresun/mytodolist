@@ -14,19 +14,19 @@ const SearchPanel = ({ setSearchValue, handleChangeFav, handleChangeDone, data, 
 
             ? "fa-regular fa-square fa-lg"
             : 'fa-regular fa-square-check fa-lg'}
-            onClick={handleChangeDone}
+            onClick={() => handleChangeDone()}
           />
 
-          <p onClick={handleChangeDone}>Show incomplete</p>
+          <p onClick={() => handleChangeDone()}>Show incomplete</p>
 
           <i className={!props.favChecked
 
             ? "fa-regular fa-square fa-lg"
             : 'fa-regular fa-square-check fa-lg'}
-            onClick={handleChangeFav}
+            onClick={() => handleChangeFav()}
           />
 
-          <p onClick={handleChangeFav}>Show favorites</p>
+          <p onClick={() => handleChangeFav()}>Show favorites</p>
 
         </div>
 

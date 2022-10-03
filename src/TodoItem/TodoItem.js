@@ -98,12 +98,12 @@ const TodoItem = ({ data, ...props }) => {
                                 ? "fa-regular fa-square fa-lg"
                                 : 'fa-regular fa-square-check fa-lg'}
 
-                                onClick={props.setTodoDone} />
+                                onClick={() => props.setTodoDone()} />
 
                             {props.done
 
-                                ? (<h1 className='done' onClick={props.setTodoDone} >{props.prodName}</h1>)
-                                : (<h1 className='undone' onClick={props.setTodoDone} >{props.prodName}</h1>)}
+                                ? (<h1 className='done' onClick={() => props.setTodoDone()} >{props.prodName}</h1>)
+                                : (<h1 className='undone' onClick={() => props.setTodoDone()} >{props.prodName}</h1>)}
 
                         </div>
 
@@ -112,13 +112,13 @@ const TodoItem = ({ data, ...props }) => {
                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
 
                         <i className="fa fa-star fa-lg" aria-hidden="true" style={props.favorite ? { color: 'orange', transition: '150ms ease' } : { color: '#ccc', transition: '150ms ease' }}
-                            onClick={props.setFavorite} />
+                            onClick={() => props.setFavorite()} />
 
                         <i className="fas fa-edit fa-lg" style={{ color: 'blue' }}
-                            onClick={props.editTodoStatus} />
+                            onClick={() => props.editTodoStatus()} />
 
                         <i className="fa-solid fa-trash fa-lg" aria-hidden="true" style={{ color: 'red' }}
-                            onClick={props.deleteTodoItem} /></div>
+                            onClick={() => props.deleteTodoItem()} /></div>
 
                 </div>
 
@@ -149,7 +149,7 @@ const TodoItem = ({ data, ...props }) => {
                                 <div>
                                     <i className="fa fa-check fa-lg" aria-hidden="true" style={{ color: 'green' }}
                                         type='submit'
-                                        onClick={props.editTodoItem} />
+                                        onClick={() => props.editTodoItem()} />
                                 </div>
 
 

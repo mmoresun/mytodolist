@@ -1,24 +1,17 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 
+import { v4 as uuid } from 'uuid'
 import Header from './Header/Header';
 import TodoItemsList from './TodoItemsList/TodoItemsList';
 import TodoAddForm from './TodoAddForm/TodoAddForm';
 import Footer from './Footer/Footer';
 import SearchPanel from './SearchPanel/SearchPanel';
+import { todolist } from './Store/todolist';
 
 function App() {
 
-  const [data, setData] = useState([
-
-    { prodName: 'Make a todo list', done: true, favorite: false, edit: false, id: 756357 },
-    { prodName: 'Check off the first thing of todo list', done: false, favorite: false, edit: false, id: 3775634667 },
-    { prodName: 'Realise I have completed 2 things on the list', done: false, favorite: false, edit: false, id: 756345897 },
-    { prodName: 'Do nothing', done: true, favorite: true, edit: false, id: 56743454 },
-    { prodName: 'Do more nothing', done: false, favorite: true, edit: false, id: 1543450 },
-    { prodName: 'Reward myself with a nap', done: false, favorite: true, edit: false, id: 2343489534 }
-
-  ]);
+  const [data, setData] = useState(todolist);
 
 // Save todos to localstorage
 
@@ -50,7 +43,7 @@ function App() {
       done: false,
       favorite: false,
       edit: false,
-      id: Date.now()
+      id: uuid()
     }
 
 
@@ -108,6 +101,7 @@ function App() {
     // }
 
     const newTodoArr = data.filter(item => item.id !== id)
+    
     setData(newTodoArr);
 
   }
@@ -173,7 +167,7 @@ function App() {
     setData(newData);
   }
 
-  // Show/hide favorites 
+  // Show/hide favorite items
 
   const [favChecked, setFavChecked] = useState(false);
 
@@ -181,25 +175,9 @@ function App() {
 
     setFavChecked(!favChecked);
 
-    // if (!favChecked) { console.log(searchFilteredTodos.filter(item => item.favorite)); }
-
-    // else { console.log(searchFilteredTodos); }
-
-    // if (!favChecked) {
-
-    //   return searchFilteredTodos.filter(item => item.favorite);
-
-    // }
-
-    // else {
-
-    //   return searchFilteredTodos;
-
-    // }
-
   }
 
-  // Show/hide done/undone
+  // Show/hide incomplete items
 
   const [doneChecked, setDoneChecked] = useState(true);
 
